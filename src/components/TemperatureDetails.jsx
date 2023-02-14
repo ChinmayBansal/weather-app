@@ -45,7 +45,35 @@ function TemperatureDetails() {
         </div>
 
         <div className='flex flex-row items-center jsutify-center space-x-2 text-white text-sm py-3'>
-           <UilSun /> 
+            <UilSun />
+            <p className='font-light'>
+                Rise: <span className='font-medium ml-1'>06:45 AM</span>
+            </p>
+            <p className='font-light'>
+                |
+            </p>
+
+            <UilSunset />
+            <p className='font-light'>
+                Set: <span className='font-medium ml-1'>06:30 PM</span>
+            </p>
+            <p className='font-light'>
+                |
+            </p>
+
+            <UilSun />
+            <p className='font-light'>
+                High: <span className='font-medium ml-1'>53°</span>
+            </p>
+            <p className='font-light'>
+                |
+            </p>
+
+            <UilSun />
+            <p className='font-light'>
+                Low: <span className='font-medium ml-1'>32°</span>
+            </p>
+            
         </div>
     </div>;
 }
