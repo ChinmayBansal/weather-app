@@ -1,5 +1,5 @@
 import './App.css';
-//import UilReact from '@iconscout/react-unicons/icons/uil-react'
+import UilReact from '@iconscout/react-unicons/icons/uil-react'
 import TopButtons from './components/TopButtons';
 import Inputs from './components/Inputs';
 import TimeLocation from './components/TimeLocation';
@@ -11,7 +11,7 @@ import getFormattedData from './Services/WeatherService';
 function App() {
 
   const fetchWeather = async () => {
-    const data =  await getFormattedData({q: 'fremont'});
+    const data =  await getFormattedData({q: 'london'});
     console.log(data);
   };
 
