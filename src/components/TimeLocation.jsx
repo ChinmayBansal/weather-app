@@ -1,16 +1,17 @@
 import React from 'react'
+import { formatToLocalTime } from '../Services/WeatherService';
 
-function TimeLocation() {
+function TimeLocation({weather: {dt, timezone, name, country}}) {
     return <div>
         <div className='flex items-center justify-center my-8'>
             <p className='text-white text-xl font-extralight'>
-                Monday, Febuary 13 2023 | Local Time: 9:51 AM
+               {formatToLocalTime(dt, timezone)}
             </p>
         </div>
 
         <div className='flex items-center justify-center my-3'>
             <p className='text-white text-3xl font-medium' >
-                Fremont, CA
+               {`${name}, ${country}`}
             </p>
         </div>
     </div>
