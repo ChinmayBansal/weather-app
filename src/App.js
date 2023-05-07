@@ -11,8 +11,8 @@ import { useEffect, useState } from 'react';
 
 function App() {
 
-  const [query, setQuery] = useState({ q: "Berlin" });
-  const [units, setUnits] = useState({ q: "metric" });
+  const [query, setQuery] = useState({ q: 'Berlin' });
+  const [units, setUnits] = useState('metric');
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
@@ -20,6 +20,8 @@ function App() {
       await getFormattedData({ ...query, units }).then(
         (data) => {
           setWeather(data);
+          setUnits(units);
+          console.log(data)
         });
     };
     fetchWeather();
