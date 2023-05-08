@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {
     UilArrowUp,
     UilArrowDown,
@@ -10,7 +10,8 @@ import {
 } from "@iconscout/react-unicons";
 import { formatToLocalTime, iconUrlFromCode } from '../Services/WeatherService';
 
-function TemperatureDetails({weather: {details, icon, temp, temp_min, temp_max, sunrise, sunset, speed, humidity, feels_like, timezone},}) {
+function TemperatureDetails({weather: {details, icon, temp, temp_min, temp_max, sunrise, sunset, speed, humidity, feels_like, timezone},}, units) {
+
     return <div>
 
         <div className='flex items-center justify-center py-6 text-xl text-cyan-300'>
@@ -40,7 +41,7 @@ function TemperatureDetails({weather: {details, icon, temp, temp_min, temp_max, 
                 <div className='flex font-light text-sm items-center justify-center'>
                     <UilWind size={18} className='mr-1' />
                     Wind Speed:
-                    <span className='font-medium ml-1'> {`${speed.toFixed()}km/h`}</span>
+                    <span className='font-medium ml-1'> {`${speed.toFixed()}`}</span>
                 </div>
             </div>
         </div>
